@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cineflix</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="topbar">
+  <div class="logo">CINEFLIX</div>
+  <nav>
+    <a class="active" href="#">Início</a><a href="#">Filmes</a><a href="#">Séries</a><a href="#">Minha Lista</a>
+  </nav>
+<div class="top-actions">
+    <form class="search" role="search">
+        <button class="search-button" type="submit" aria-label="Buscar filmes e séries">
+            <img src="https://cdn-icons-png.flaticon.com/128/2679/2679967.png" alt="">
+        </button>
+        <input id="catalog-search" type="search" placeholder="Buscar filmes e séries..." aria-label="Buscar filmes e séries">
+    </form>
+
+    <button class="icon-btn">
+        <img src="https://cdn-icons-png.flaticon.com/128/2645/2645890.png" alt="Notificações">
+    </button>
+
+    <button class="avatar" type="button" aria-label="Abrir perfil" aria-expanded="false" aria-controls="profile-menu">
+        <img src="https://cdn-icons-png.flaticon.com/128/13464/13464146.png" alt="">
+    </button>
+    <div class="profile-menu" id="profile-menu" hidden>
+        <strong>Meu perfil</strong>
+        <span>Perfil ativo no Cineflix</span>
+    </div>
+</div>
+</header>
+
+<main>
+<section class="hero">
+
+  <img
+    class="hero-image"
+    src="https://image.tmdb.org/t/p/original/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg"
+    alt="Vingadores: Ultimato"
+  >
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <span class="type">FILME</span>
+    <h1>Vingadores: Ultimato</h1>
+    <div class="meta">
+      <span>2019</span>
+      <span>3h 5min</span>
+      <span>Ação</span>
+      <b>12+</b>
+      <span>HD</span>
+    </div>
+
+    <p>
+      Após o estalar de dedos de Thanos, os heróis sobreviventes se reúnem em uma última e desesperada missão através do tempo para reverter o caos e salvar o universo.
+    </p>
+
+    <div class="hero-buttons">
+      <button class="watch" type="button"><img class="btn-icon" src="https://cdn-icons-png.flaticon.com/128/727/727245.png" alt=""><span>Assistir</span></button>
+      <button class="list" type="button"><img class="btn-icon" src="https://cdn-icons-png.flaticon.com/128/2099/2099192.png" alt="Lista"><span>Minha Lista</span></button>
+    </div>
+  </div>
+
+  <div class="hero-arrows">
+    <button type="button" aria-label="Filme anterior"><img src="https://cdn-icons-png.flaticon.com/128/271/271218.png" alt="Seta esquerda"></button>
+    <button type="button" aria-label="Próximo filme recente"><img src="https://cdn-icons-png.flaticon.com/128/271/271226.png" alt="Seta direita"></button>
+  </div>
+
+</section>
+
+<div class="content">
+  <section class="row">
+    <div class="row-title"><h2>Em Alta</h2><a href="#">Ver tudo ›</a></div>
+    <div class="carousel-viewport">
+      <div class="cards" id="trending"></div>
+      <div class="carousel-controls" aria-label="Navegação Em Alta">
+        <button type="button" aria-label="Filmes anteriores em Em Alta"><img src="https://cdn-icons-png.flaticon.com/128/271/271218.png" alt=""></button>
+        <button type="button" aria-label="Mais filmes em Em Alta"><img src="https://cdn-icons-png.flaticon.com/128/271/271226.png" alt=""></button>
+      </div>
+    </div>
+  </section>
+  <section class="row">
+    <div class="row-title"><h2>Lançamentos</h2><a href="#">Ver tudo ›</a></div>
+    <div class="carousel-viewport">
+      <div class="cards" id="releases"></div>
+      <div class="carousel-controls" aria-label="Navegação Lançamentos">
+        <button type="button" aria-label="Filmes anteriores em Lançamentos"><img src="https://cdn-icons-png.flaticon.com/128/271/271218.png" alt=""></button>
+        <button type="button" aria-label="Mais filmes em Lançamentos"><img src="https://cdn-icons-png.flaticon.com/128/271/271226.png" alt=""></button>
+      </div>
+    </div>
+  </section>
+  <section class="row">
+    <div class="row-title"><h2>Séries Populares</h2><a href="#">Ver tudo ›</a></div>
+    <div class="carousel-viewport">
+      <div class="cards" id="series"></div>
+      <div class="carousel-controls" aria-label="Navegação Séries Populares">
+        <button type="button" aria-label="Séries anteriores em Séries Populares"><img src="https://cdn-icons-png.flaticon.com/128/271/271218.png" alt=""></button>
+        <button type="button" aria-label="Mais séries em Séries Populares"><img src="https://cdn-icons-png.flaticon.com/128/271/271226.png" alt=""></button>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
